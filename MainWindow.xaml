@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BattleShips"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="670" Width="1000">
+    <Grid  Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="165*"/>
+            <RowDefinition Height="446*"/>
+            <RowDefinition Height="30.4"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="0"/>
+        </Grid.ColumnDefinitions>
+        <Button Name="Battleships" Content="Reboot"  Grid.Row="0"   Grid.Column="1" />
+        <Grid Name="GameBoard" Loaded="GameBoard_Loaded" Grid.Row="1" Grid.Column="1" >
+        </Grid>
     </Grid>
 </Window>

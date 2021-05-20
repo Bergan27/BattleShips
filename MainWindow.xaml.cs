@@ -24,5 +24,28 @@ namespace BattleShips
         {
             InitializeComponent();
         }
+        private void GameBoard_Loaded(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+            var row = new RowDefinition();
+            row.Height = new GridLength(45);
+            GameBoard.RowDefinitions.Add(row);
+            var col = new ColumnDefinition();
+            col.Width = new GridLength(50);
+                GameBoard.ColumnDefinitions.Add(col);
+            for (int j = 0; j < 10; j++)
+            {
+                var button = new Button();
+                button.Click += new RoutedEventHandler((a, b) => {
+                    button.Content = "träff";
+                });
+                Grid.SetRow(button, i);
+                Grid.SetColumn(button, j);
+                    GameBoard.Children.Add(button);
+            }
+            }
+        }
     }
 }
+
