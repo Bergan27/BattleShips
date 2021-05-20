@@ -24,6 +24,14 @@ namespace BattleShips
         {
             InitializeComponent();
         }
+        private void Coordinates_X(object sender, RoutedEventArgs e)
+        {
+ 
+        }
+        private void Coordinates_1(object sender, RoutedEventArgs e)
+        {
+
+        }
         private void GameBoard_Loaded(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < 10; i++)
@@ -32,7 +40,7 @@ namespace BattleShips
             row.Height = new GridLength(45);
             GameBoard.RowDefinitions.Add(row);
             var col = new ColumnDefinition();
-            col.Width = new GridLength(50);
+            col.Width = new GridLength(45);
                 GameBoard.ColumnDefinitions.Add(col);
             for (int j = 0; j < 10; j++)
             {
@@ -42,7 +50,7 @@ namespace BattleShips
                 });
                 Grid.SetRow(button, i);
                 Grid.SetColumn(button, j);
-                    GameBoard.Children.Add(button);
+                GameBoard.Children.Add(button);
             }
             }
         }
