@@ -32,7 +32,7 @@ namespace BattleShips
         {
 
         }
-        private void GameBoard_Loaded(object sender, RoutedEventArgs e)
+        public void GameBoard_Loaded(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < 10; i++)
             {
@@ -45,8 +45,9 @@ namespace BattleShips
             for (int j = 0; j < 10; j++)
             {
                 var button = new Button();
+                button.Content = 0;
                 button.Click += new RoutedEventHandler((a, b) => {
-                    button.Content = "träff";
+                    button.Content = 0;
                 });
                 Grid.SetRow(button, i);
                 Grid.SetColumn(button, j);
@@ -55,33 +56,30 @@ namespace BattleShips
                 }
             }
         }
-        private void GameBoard_Loaded2(object sender, RoutedEventArgs e)
+
+        public void Game()
+          
         {
-            for (int i = 0; i < 10; i++)
+            var turn = 0;
+
+            var player1Turns = true;
+            while (true)
             {
-                var row = new RowDefinition();
-                row.Height = new GridLength(45);
-                GameBoard2.RowDefinitions.Add(row);
-                var col = new ColumnDefinition();
-                col.Width = new GridLength(45);
-                GameBoard2.ColumnDefinitions.Add(col);
-                for (int j = 0; j < 10; j++)
+                turn++;
+                if (player1Turns)
                 {
-                    var button = new Button();
-                    button.Click += new RoutedEventHandler((a, b) => {
-
-                        
-                            
-                        
-                    });
-                    Grid.SetRow(button, i);
-                    Grid.SetColumn(button, j);
-                    GameBoard2.Children.Add(button);
-
+                    //player one plays
+                }
+                else
+                {
+                    //player two plays
+                }
+                if (turn % 3 == 0)
+                {
+                    player1Turns = !player1Turns;
                 }
             }
         }
-
 
     }
 

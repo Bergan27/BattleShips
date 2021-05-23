@@ -14,18 +14,17 @@
             <RowDefinition Height="30.4"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="45"/>
             <ColumnDefinition Width="450"/>
-            <ColumnDefinition Width="155"/>
             <ColumnDefinition Width="450"/>
             <ColumnDefinition Width="0"/>
         </Grid.ColumnDefinitions>
-        <Button Name="Battleships" Content="Reboot"  Grid.Row="0"   Grid.Column="1" Height="100" Width="300" VerticalAlignment="Center" />
-        <Grid Name="GameBoard" Loaded="GameBoard_Loaded" Grid.Row="2" Grid.Column="1"  VerticalAlignment="Top" HorizontalAlignment="Center">
+        <Button Name="Battleships" Content="Reboot"  Grid.Row="0"   Grid.Column="2" Height="100" Width="300" VerticalAlignment="Center" />
+        <Grid Name="GameBoard" Loaded="GameBoard_Loaded" Grid.Row="2" Grid.Column="2"  VerticalAlignment="Top" HorizontalAlignment="Center">
         </Grid>
-        <Grid Name="GameBoard2" Loaded="GameBoard_Loaded2" Grid.Row="2" Grid.Column="3"  VerticalAlignment="Top" HorizontalAlignment="Center">
-        </Grid>
-        <Grid Name="CoordinatesX" Loaded="Coordinates_X" Grid.Row="1" Grid.Column="1"  Width="450">
+      
+        <Grid Name="CoordinatesX" Loaded="Coordinates_X" Grid.Row="1" Grid.Column="2"  Width="450">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -49,31 +48,9 @@
             <TextBlock Grid.Column="8" Text="I" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBlock Grid.Column="9" Text="J" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
-        <Grid Name="CoordinatesX2" Loaded="Coordinates_X" Grid.Row="1" Grid.Column="3"  Width="450">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="A" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="1" Text="B" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="2" Text="C" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="3" Text="D" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="4" Text="E" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="5" Text="F" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="6" Text="G" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="7" Text="H" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="8" Text="I" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="9" Text="J" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid x:Name="Coordinates1" Loaded="Coordinates_1" Grid.Row="2" Grid.Column="2" Height="450" Margin="0, -50, 0, 20">
+       
+        
+        <Grid x:Name="Coordinates1" Loaded="Coordinates_1" Grid.Row="2" Grid.Column="1" Height="450" Margin="0, -50, 0, 20">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
