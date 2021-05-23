@@ -51,9 +51,58 @@ namespace BattleShips
                 Grid.SetRow(button, i);
                 Grid.SetColumn(button, j);
                 GameBoard.Children.Add(button);
-            }
+
+                }
             }
         }
+        private void GameBoard_Loaded2(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                var row = new RowDefinition();
+                row.Height = new GridLength(45);
+                GameBoard2.RowDefinitions.Add(row);
+                var col = new ColumnDefinition();
+                col.Width = new GridLength(45);
+                GameBoard2.ColumnDefinitions.Add(col);
+                for (int j = 0; j < 10; j++)
+                {
+                    var button = new Button();
+                    button.Click += new RoutedEventHandler((a, b) => {
+
+                        
+                            
+                        
+                    });
+                    Grid.SetRow(button, i);
+                    Grid.SetColumn(button, j);
+                    GameBoard2.Children.Add(button);
+
+                }
+            }
+        }
+
+
     }
+
+   
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
