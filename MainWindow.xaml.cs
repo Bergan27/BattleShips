@@ -48,6 +48,12 @@ namespace BattleShips
                 button.Content = 0;
                 button.Click += new RoutedEventHandler((a, b) => {
                     button.Content = 0;
+
+                    // Jag hade tänkt här att göra en switch av något slag som tog in värden från de olika knapparna och sparade dem i 2 olika listor
+                    // En för spelare 1 och en för spelare 2 som sparat alla skepp som sätts ut med ett värde på 1 och vatten värde 0
+                    // när man väl träffat ett motståndar skepp så hade värdet på den knappen säts om till o 
+                    // Då hade en annan funktion kollat av om listans värde var lika med 0 och skrivit ut att den spelare som sänkt alla skepp vunnnit
+                    // 
                 });
                 Grid.SetRow(button, i);
                 Grid.SetColumn(button, j);
@@ -60,6 +66,11 @@ namespace BattleShips
         public void Game()
           
         {
+
+            // Det skulle funnits en funktion som tagit "block" som skulle varit de olika skeppen och satt ett värde på 1-4 knappar i rad
+            // Skeppen skulle ärva funktionalitet av varandra och öka storleken med 1 
+            // Det skulle funnits en gräns för skeppen så att de inte skulle kunna sättas utanför spelplanen 
+            // Och skeppen skulle kunna roteras med hjälp av horisontalalignment / verticalalignment
             var turn = 0;
 
             var player1Turns = true;
@@ -72,6 +83,10 @@ namespace BattleShips
                 }
                 else
                 {
+                    // Här är en enkel funktion som roterar omgångarna mellan spelare ett och två
+                    // Input från denna hade tagits för att bestämma vilken lista som input från knapparna skulle sparats i 
+                    
+                    player2Turns();
                     //player two plays
                 }
                 if (turn % 3 == 0)
