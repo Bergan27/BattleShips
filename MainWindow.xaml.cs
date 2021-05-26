@@ -20,6 +20,7 @@ namespace BattleShips
     /// </summary>
     public partial class MainWindow : Window
     {
+        int round = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -47,7 +48,15 @@ namespace BattleShips
                 var button = new Button();
                 button.Content = 0;
                 button.Click += new RoutedEventHandler((a, b) => {
-                    button.Content = 0;
+                    if (round < 10)
+                    {
+                        button.Content = 1;
+                        round++;
+                    }
+                    else
+                    {
+                        button.Content = 0;
+                    }
 
                     // Jag hade tänkt här att göra en switch av något slag som tog in värden från de olika knapparna och sparade dem i 2 olika listor
                     // En för spelare 1 och en för spelare 2 som sparat alla skepp som sätts ut med ett värde på 1 och vatten värde 0
@@ -58,9 +67,11 @@ namespace BattleShips
                 Grid.SetRow(button, i);
                 Grid.SetColumn(button, j);
                 GameBoard.Children.Add(button);
+                    
 
                 }
             }
+            
         }
 
         public void Game()
@@ -86,7 +97,7 @@ namespace BattleShips
                     // Här är en enkel funktion som roterar omgångarna mellan spelare ett och två
                     // Input från denna hade tagits för att bestämma vilken lista som input från knapparna skulle sparats i 
                     
-                    player2Turns();
+                    
                     //player two plays
                 }
                 if (turn % 3 == 0)
@@ -96,6 +107,12 @@ namespace BattleShips
             }
         }
 
+
+
+        int[,] buttonListPlayer1 = new int[10, 10];
+        var Row = Grid.GetRow(button);
+        var Column = Grid.GetColumn(button);
+         buttonListPlayer1[Row, Column] = 1;
     }
 
    
